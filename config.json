@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "id": "rule1",
+      "name": "rule1",
+      "protocol": "http",
+      "serviceId": "backend-http-server",
+      "prefix": "/http-server",
+      "paths": [
+        "/http-server/ping"
+      ]
+    }
+  ]
+}

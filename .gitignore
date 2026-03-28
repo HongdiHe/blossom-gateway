@@ -1,0 +1,12 @@
+*.log
+logs/
+target/
+*/target/
+nacos/
+work/
+.idea/
+.vscode/
+.trae/
+derby.log
+*.class
+**/__pycache__/

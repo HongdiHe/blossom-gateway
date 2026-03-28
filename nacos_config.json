@@ -1,0 +1,47 @@
+{
+  "rules": [
+    {
+      "id": "http-server",
+      "name": "http-server",
+      "paths": [
+        "/http-server/ping"
+      ],
+      "prefix": "/http-server",
+      "protocol": "http",
+      "retryConfig": {
+        "times": 3
+      },
+      "serviceId": "backend-http-server",
+      "flowControlConfigs": [
+        {
+          "type": "path",
+          "value": "/http-server/ping",
+          "model": "distributed",
+          "config": {
+            "duration": 1,
+            "permits": 1000
+          }
+        }
+      ],
+      "hystrixConfigs": [
+        {
+          "path": "/http-server/ping",
+          "timeoutInMilliseconds": 5000,
+          "threadCoreSize": 20,
+          "fallbackResponse": "fallback"
+        }
+      ],
+      "filterConfigs": [
+        {
+          "config": {
+            "load_balance": "RoundRobin"
+          },
+          "id": "load_balance_filter"
+        },
+        {
+          "id": "flow_ctl_filter"
+        }
+      ]
+    }
+  ]
+}
