@@ -1,3 +1,9 @@
+<h1 align="center">BlossomGateway</h1>
+
+<p align="center">
+  <em>High-performance API gateway built on Netty — Disruptor peak-shaving, Redis+Lua rate limiting, Nacos live routing</em>
+</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/Netty-4.x-5B5EA6?style=for-the-badge" />
@@ -6,10 +12,8 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
 </p>
 
-<h1 align="center">BlossomGateway</h1>
-
 <p align="center">
-  <b>High-performance API gateway built on Netty — Zero-copy request pipelines with Disruptor and dynamic routing via Nacos</b>
+  <img src="docs/images/banner.svg" alt="BlossomGateway Banner" width="920" />
 </p>
 
 <p align="center">

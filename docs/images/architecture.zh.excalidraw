@@ -1,0 +1,64 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "claude-code",
+  "elements": [
+    {"type":"rectangle","id":"bg","x":0,"y":0,"width":980,"height":580,"backgroundColor":"#faf5ff","fillStyle":"solid","strokeColor":"none","strokeWidth":0,"roundness":{"type":3},"opacity":100},
+    {"type":"rectangle","id":"top_bar","x":0,"y":0,"width":980,"height":6,"backgroundColor":"#7c3aed","fillStyle":"solid","strokeColor":"none","strokeWidth":0,"roundness":null,"opacity":100},
+    {"type":"rectangle","id":"bot_bar","x":0,"y":574,"width":980,"height":6,"backgroundColor":"#7c3aed","fillStyle":"solid","strokeColor":"none","strokeWidth":0,"roundness":null,"opacity":100},
+
+    {"type":"text","id":"diagram_title","x":22,"y":14,"width":280,"height":16,"text":"BlossomGateway — 架构总览","fontSize":12,"fontFamily":2,"strokeColor":"#7c3aed","textAlign":"left","verticalAlign":"top","baseline":11},
+
+    {"type":"rectangle","id":"client","x":360,"y":28,"width":200,"height":46,"backgroundColor":"#ede9fe","fillStyle":"solid","strokeColor":"#7c3aed","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"client_t","x":360,"y":42,"width":200,"height":18,"text":"客户端（HTTP 请求）","fontSize":14,"fontFamily":2,"strokeColor":"#4c1d95","textAlign":"center","verticalAlign":"top","baseline":13},
+
+    {"type":"arrow","id":"arr_c_n","x":460,"y":74,"width":0,"height":22,"points":[[0,0],[0,22]],"strokeColor":"#7c3aed","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"rectangle","id":"netty_zone","x":160,"y":96,"width":600,"height":84,"backgroundColor":"#f3e8ff","fillStyle":"solid","strokeColor":"#a855f7","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"netty_title","x":165,"y":112,"width":590,"height":18,"text":"Netty 主从 Reactor","fontSize":15,"fontFamily":2,"strokeColor":"#4c1d95","textAlign":"center","verticalAlign":"top","baseline":13},
+    {"type":"text","id":"netty_sub","x":165,"y":140,"width":590,"height":14,"text":"Boss Group 接收连接  /  Worker Group 处理 I/O  /  全程非阻塞","fontSize":11,"fontFamily":2,"strokeColor":"#6b21a8","textAlign":"center","verticalAlign":"top","baseline":10},
+
+    {"type":"arrow","id":"arr_n_fc","x":460,"y":180,"width":0,"height":24,"points":[[0,0],[0,24]],"strokeColor":"#7c3aed","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"rectangle","id":"fc_zone","x":40,"y":204,"width":760,"height":76,"backgroundColor":"#ede9fe","fillStyle":"solid","strokeColor":"#7c3aed","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"fc_title","x":45,"y":218,"width":750,"height":18,"text":"六阶段过滤责任链","fontSize":14,"fontFamily":2,"strokeColor":"#4c1d95","textAlign":"center","verticalAlign":"top","baseline":13},
+    {"type":"text","id":"fc_sub","x":45,"y":246,"width":750,"height":14,"text":"认证  →  限流  →  熔断  →  灰度发布  →  日志记录  →  路由转发","fontSize":11,"fontFamily":2,"strokeColor":"#7c3aed","textAlign":"center","verticalAlign":"top","baseline":10},
+
+    {"type":"rectangle","id":"redis","x":822,"y":210,"width":144,"height":64,"backgroundColor":"#fee2e2","fillStyle":"solid","strokeColor":"#ef4444","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"redis_t1","x":822,"y":226,"width":144,"height":16,"text":"Redis + Lua","fontSize":13,"fontFamily":2,"strokeColor":"#7f1d1d","textAlign":"center","verticalAlign":"top","baseline":12},
+    {"type":"text","id":"redis_t2","x":822,"y":248,"width":144,"height":14,"text":"分布式限流计数器","fontSize":10,"fontFamily":2,"strokeColor":"#991b1b","textAlign":"center","verticalAlign":"top","baseline":10},
+    {"type":"arrow","id":"arr_redis_fc","x":822,"y":242,"width":22,"height":0,"points":[[0,0],[-22,0]],"strokeColor":"#ef4444","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"arrow","id":"arr_fc_dis","x":460,"y":280,"width":0,"height":24,"points":[[0,0],[0,24]],"strokeColor":"#7c3aed","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"rectangle","id":"disruptor","x":260,"y":304,"width":400,"height":68,"backgroundColor":"#fce7f3","fillStyle":"solid","strokeColor":"#ec4899","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"dis_t1","x":260,"y":320,"width":400,"height":18,"text":"LMAX Disruptor 环形缓冲区","fontSize":14,"fontFamily":2,"strokeColor":"#831843","textAlign":"center","verticalAlign":"top","baseline":13},
+    {"type":"text","id":"dis_t2","x":260,"y":346,"width":400,"height":14,"text":"无锁异步交接  /  单写入原则  /  消除缓存行竞争","fontSize":10,"fontFamily":2,"strokeColor":"#9d174d","textAlign":"center","verticalAlign":"top","baseline":10},
+
+    {"type":"arrow","id":"arr_dis_down","x":460,"y":372,"width":0,"height":24,"points":[[0,0],[0,24]],"strokeColor":"#7c3aed","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"rectangle","id":"downstream","x":40,"y":396,"width":760,"height":76,"backgroundColor":"#dcfce7","fillStyle":"solid","strokeColor":"#16a34a","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"ds_t1","x":45,"y":412,"width":750,"height":18,"text":"下游服务","fontSize":14,"fontFamily":2,"strokeColor":"#14532d","textAlign":"center","verticalAlign":"top","baseline":13},
+    {"type":"text","id":"ds_t2","x":45,"y":438,"width":750,"height":14,"text":"NexusForum（社区论坛）  |  EduForge（教育平台）  |  EduAgent（AI 流水线）","fontSize":11,"fontFamily":2,"strokeColor":"#166534","textAlign":"center","verticalAlign":"top","baseline":10},
+
+    {"type":"rectangle","id":"nacos","x":822,"y":396,"width":144,"height":76,"backgroundColor":"#dbeafe","fillStyle":"solid","strokeColor":"#3b82f6","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"nacos_t1","x":822,"y":416,"width":144,"height":16,"text":"Nacos 2.x","fontSize":13,"fontFamily":2,"strokeColor":"#1e3a8a","textAlign":"center","verticalAlign":"top","baseline":12},
+    {"type":"text","id":"nacos_t2","x":822,"y":440,"width":144,"height":14,"text":"服务发现 + 配置推送","fontSize":10,"fontFamily":2,"strokeColor":"#1d4ed8","textAlign":"center","verticalAlign":"top","baseline":10},
+    {"type":"arrow","id":"arr_nacos_down","x":822,"y":434,"width":22,"height":0,"points":[[0,0],[-22,0]],"strokeColor":"#3b82f6","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"rectangle","id":"resilience","x":822,"y":304,"width":144,"height":68,"backgroundColor":"#fef3c7","fillStyle":"solid","strokeColor":"#f59e0b","strokeWidth":2,"roundness":{"type":3},"opacity":100},
+    {"type":"text","id":"res_t1","x":822,"y":322,"width":144,"height":16,"text":"Resilience4j","fontSize":13,"fontFamily":2,"strokeColor":"#78350f","textAlign":"center","verticalAlign":"top","baseline":12},
+    {"type":"text","id":"res_t2","x":822,"y":344,"width":144,"height":14,"text":"熔断器状态机","fontSize":10,"fontFamily":2,"strokeColor":"#92400e","textAlign":"center","verticalAlign":"top","baseline":10},
+    {"type":"arrow","id":"arr_res_fc","x":822,"y":338,"width":22,"height":0,"points":[[0,0],[-22,0]],"strokeColor":"#f59e0b","strokeWidth":2,"fillStyle":"solid","startArrowhead":null,"endArrowhead":"arrow","roughness":0,"opacity":100},
+
+    {"type":"rectangle","id":"legend_netty","x":22,"y":490,"width":14,"height":14,"backgroundColor":"#f3e8ff","fillStyle":"solid","strokeColor":"#a855f7","strokeWidth":1,"roundness":null,"opacity":100},
+    {"type":"text","id":"leg_netty_t","x":42,"y":490,"width":100,"height":14,"text":"Netty 层","fontSize":10,"fontFamily":2,"strokeColor":"#555","textAlign":"left","verticalAlign":"top","baseline":10},
+    {"type":"rectangle","id":"legend_fc","x":152,"y":490,"width":14,"height":14,"backgroundColor":"#ede9fe","fillStyle":"solid","strokeColor":"#7c3aed","strokeWidth":1,"roundness":null,"opacity":100},
+    {"type":"text","id":"leg_fc_t","x":172,"y":490,"width":100,"height":14,"text":"过滤责任链","fontSize":10,"fontFamily":2,"strokeColor":"#555","textAlign":"left","verticalAlign":"top","baseline":10},
+    {"type":"rectangle","id":"legend_dis","x":282,"y":490,"width":14,"height":14,"backgroundColor":"#fce7f3","fillStyle":"solid","strokeColor":"#ec4899","strokeWidth":1,"roundness":null,"opacity":100},
+    {"type":"text","id":"leg_dis_t","x":302,"y":490,"width":100,"height":14,"text":"Disruptor 队列","fontSize":10,"fontFamily":2,"strokeColor":"#555","textAlign":"left","verticalAlign":"top","baseline":10},
+    {"type":"rectangle","id":"legend_down","x":412,"y":490,"width":14,"height":14,"backgroundColor":"#dcfce7","fillStyle":"solid","strokeColor":"#16a34a","strokeWidth":1,"roundness":null,"opacity":100},
+    {"type":"text","id":"leg_down_t","x":432,"y":490,"width":100,"height":14,"text":"下游服务","fontSize":10,"fontFamily":2,"strokeColor":"#555","textAlign":"left","verticalAlign":"top","baseline":10}
+  ],
+  "appState": {"viewBackgroundColor":"#faf5ff"}
+}

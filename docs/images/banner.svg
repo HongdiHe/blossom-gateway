@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220">
+  <!-- Background -->
+  <rect width="920" height="220" fill="#faf5ff"/>
+  <!-- Top accent bar -->
+  <rect width="920" height="6" fill="#7c3aed"/>
+  <!-- Bottom accent bar -->
+  <rect y="214" width="920" height="6" fill="#7c3aed"/>
+
+  <!-- Logo box -->
+  <rect x="40" y="52" width="80" height="80" rx="12" fill="#7c3aed"/>
+  <text x="80" y="92" fill="white" font-family="Helvetica,Arial,sans-serif" font-size="40" font-weight="bold" text-anchor="middle" dominant-baseline="middle">BG</text>
+
+  <!-- Project name -->
+  <text x="142" y="86" fill="#2e1065" font-family="Helvetica,Arial,sans-serif" font-size="40" font-weight="bold">BlossomGateway</text>
+
+  <!-- Tagline -->
+  <text x="144" y="116" fill="#7c3aed" font-family="Helvetica,Arial,sans-serif" font-size="13">Netty Reactor  →  Disruptor peak-shaving  →  Redis+Lua rate limit  →  Nacos live routing</text>
+
+  <!-- Badge 1: Netty 4.x -->
+  <rect x="144" y="146" width="82" height="26" rx="5" fill="#7c3aed"/>
+  <text x="185" y="159" fill="white" font-family="Helvetica,Arial,sans-serif" font-size="11" text-anchor="middle" dominant-baseline="middle">Netty 4.x</text>
+
+  <!-- Badge 2: LMAX Disruptor -->
+  <rect x="236" y="146" width="106" height="26" rx="5" fill="#c2410c"/>
+  <text x="289" y="159" fill="white" font-family="Helvetica,Arial,sans-serif" font-size="11" text-anchor="middle" dominant-baseline="middle">LMAX Disruptor</text>
+
+  <!-- Badge 3: Redis + Lua -->
+  <rect x="352" y="146" width="92" height="26" rx="5" fill="#dc2626"/>
+  <text x="398" y="159" fill="white" font-family="Helvetica,Arial,sans-serif" font-size="11" text-anchor="middle" dominant-baseline="middle">Redis + Lua</text>
+
+  <!-- Badge 4: Nacos 2.x -->
+  <rect x="454" y="146" width="88" height="26" rx="5" fill="#0891b2"/>
+  <text x="498" y="159" fill="white" font-family="Helvetica,Arial,sans-serif" font-size="11" text-anchor="middle" dominant-baseline="middle">Nacos 2.x</text>
+
+  <!-- Badge 5: Resilience4j -->
+  <rect x="552" y="146" width="110" height="26" rx="5" fill="#16a34a"/>
+  <text x="607" y="159" fill="white" font-family="Helvetica,Arial,sans-serif" font-size="11" text-anchor="middle" dominant-baseline="middle">Resilience4j CB</text>
+
+  <!-- Card 1: Filter Chain -->
+  <rect x="716" y="22" width="184" height="78" rx="8" fill="white" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="716" y="22" width="5" height="78" rx="2" fill="#7c3aed"/>
+  <text x="732" y="46" fill="#2e1065" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold">6-Stage Filter Chain</text>
+  <text x="732" y="66" fill="#6b7280" font-family="Helvetica,Arial,sans-serif" font-size="10">Auth → RL → CB → Gray</text>
+  <text x="732" y="82" fill="#6b7280" font-family="Helvetica,Arial,sans-serif" font-size="10">→ Log → Route</text>
+
+  <!-- Card 2: Ring Buffer -->
+  <rect x="716" y="116" width="184" height="78" rx="8" fill="white" stroke="#c2410c" stroke-width="2"/>
+  <rect x="716" y="116" width="5" height="78" rx="2" fill="#c2410c"/>
+  <text x="732" y="140" fill="#2e1065" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold">Lock-Free Ring Buffer</text>
+  <text x="732" y="162" fill="#6b7280" font-family="Helvetica,Arial,sans-serif" font-size="10">single-writer, no</text>
+  <text x="732" y="178" fill="#6b7280" font-family="Helvetica,Arial,sans-serif" font-size="10">cache-line thrash</text>
+</svg>
